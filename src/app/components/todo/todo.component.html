@@ -25,23 +25,21 @@
   </form>
 
   <ng-template #titleBlock>
-    <span class="todo__title" (dblclick)="edit()">
-      {{ todo.title }}
-    </span>
+    <span
+      class="todo__title"
+      (dblclick)="edit()">{{ todo.title }}</span>
 
     <button
+      type="button"
       class="todo__remove"
       (click)="delete.emit()"
     >
-      x
+      ×
     </button>
   </ng-template>
 
-  <div
-    class="modal overlay"
-    [class.is-active]="false"
-  >
-    <div class="modal-background has-background-white-ter"></div>
+  <div class="modal overlay" [class.is-active]="false">
+    <div class="modal-background has-background-white-ter" ></div>
     <div class="loader"></div>
   </div>
 </div>

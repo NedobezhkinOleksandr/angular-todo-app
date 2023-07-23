@@ -5,22 +5,22 @@
     <header class="todoapp__header">
       <button class="todoapp__toggle-all active"></button>
 
-      <app-todo-form (save)="addTodo($event)"></app-todo-form>
+      <!-- <app-todo-form (save)="addTodo($event)"></app-todo-form> -->
     </header>
 
-    <section class="todoapp__main">
+    <!-- <section class="todoapp__main">
       <app-todo
         *ngFor="let todo of visibleTodos$ | async; let i = index; trackBy: trackById"
         [todo]="todo"
         (delete)="deleteTodo(todo)"
-        (rename)="renameTodo(todo, $event)"
+        (rename)="renameTodo(todo)"
         (toggle)="toggleTodo(todo)"
       ></app-todo>
-    </section>
+    </section> -->
 
     <footer class="todoapp__footer">
       <span class="todoapp__active-count">
-        {{ activeCount$ | async }} items left
+        <!-- {{ activeCount$ | async }} items left -->
       </span>
 
       <app-filter></app-filter>
